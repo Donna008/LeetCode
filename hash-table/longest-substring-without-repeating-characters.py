@@ -40,16 +40,28 @@
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        # 
+        # method 2 sliding window + hash set
+        chars= set()
+        i = 0
         max_length = 0
-        for i in range(len(s)):
-            chars = set()
-            for j in range(i,len(s)):
-                if s[j] in chars:
-                    break
-                chars.add(s[j])
-                max_length = max(max_length, j-i+1)
+        for j in range(len(s)):
+            while s[j] in chars:
+                chars.remove(s[i])
+                i += 1
+            chars.add(s[j])
+            max_length = max(max_length, j-i+1)
         return max_length
+        # method 1 brute force
+        # max_length = 0
+       
+        # for i in range(len(s)):
+        #     chars = set()
+        #     for j in range(i,len(s)):
+        #         if s[j] in chars:
+        #             break
+        #         chars.add(s[j])
+        #         max_length = max(max_length, j-i+1)
+        # return max_length
 
 
 
