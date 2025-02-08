@@ -13,14 +13,14 @@ class Solution:
                 continue
             count=0
             for j in range(len(nums)):
-                if nums[j] == nums[i]:
+                if nums[i] == nums[j]:
                    count+=1
-            n_list.append((nums[j],count))
+            n_list.append((nums[i],count))
             v.add(nums[i])
         n_list.sort(key=lambda x: -x[1])
-        result = 0
+        result = []
         for i in range(k):
-            result = n_list[i][0]
+            result.append(n_list[i][0])
         return result
 
             
