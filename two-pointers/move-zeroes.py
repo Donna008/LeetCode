@@ -36,16 +36,15 @@ class Solution:
         """
     #     Do not return anything, modify nums in-place instead.
     #     """
-        non_zero_index = 0
-
-    # Traverse through the list
+        non_zero=0
         for i in range(len(nums)):
-            if nums[i] != 0:
-            # If the element is non-zero, move it to the "non_zero_index" position
-                nums[non_zero_index] = nums[i]
-                non_zero_index += 1
-    
-    # Fill the remaining positions with 0s
-        for i in range(non_zero_index, len(nums)):
-            nums[i] = 0
+            if nums[i]!=0:
+                nums[non_zero]=nums[i]
+                non_zero+=1
+        for i in range(non_zero,len(nums)):
+            # if nums[i]==0:
+                nums[i]=0
+               
+
+
 
