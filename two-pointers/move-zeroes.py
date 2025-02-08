@@ -36,15 +36,20 @@ class Solution:
         """
     #     Do not return anything, modify nums in-place instead.
     #     """
-        non_zero=0
-        for i in range(len(nums)):
-            if nums[i]!=0:
-                nums[non_zero]=nums[i]
-                non_zero+=1
-        for i in range(non_zero,len(nums)):
-            # if nums[i]==0:
-                nums[i]=0
-               
+        # non_zero=0
+        # for i in range(len(nums)):
+        #     if nums[i]!=0:
+        #         nums[non_zero]=nums[i]
+        #         non_zero+=1
+        # for i in range(non_zero,len(nums)):
+        #     # if nums[i]==0:
+        #         nums[i]=0
+        left=0
+        for right in range(len(nums)):
+            if nums[right] != 0:
+                if nums[right] !=nums[left]:
+                    nums[right],nums[left] = nums[left],nums[right]
+                left += 1
 
 
 
