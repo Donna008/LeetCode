@@ -23,7 +23,7 @@ class Solution:
         length = len(flowerbed)
         num=[]
         for i in range(len(flowerbed)):
-            if flowerbed[i]==0 or flowerbed[i]-1== 0:
+            if flowerbed[i]==0 and flowerbed[i]-1== 0:
                 num.append(flowerbed[i])
             if n> len(num):
                 return False
