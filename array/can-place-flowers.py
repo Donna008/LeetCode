@@ -25,7 +25,7 @@ class Solution:
         for i in range(len(flowerbed)):
             if flowerbed[i]==0 and flowerbed[i]-1== 0:
                 num.append(flowerbed[i])
-            if n>= len(num)-1:
+            if n>= len(num):
                 return False
             else:
                 return True
