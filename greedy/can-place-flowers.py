@@ -25,10 +25,10 @@ class Solution:
         for i in range(len(flowerbed)):
             if flowerbed[i] or flowerbed[i]-1== 0:
                 num.append(flowerbed[i])
-                if n> len(num):
-                    return False
-                else:
-                    return True
+            if n> len(num):
+                return False
+            else:
+                return True
                 # len(flowerbed[i]) > n:
                 #     return False
                 # else:
