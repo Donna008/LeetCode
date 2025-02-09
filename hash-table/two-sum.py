@@ -10,9 +10,17 @@ class Solution:
         #             return [i,j]
         # hashmap
         #  make an empty map
-        map = {}
-        for i, num in enumerate(nums):
-            value = target - num
-            if value in map:
-                return [map[value],i]
-            map[num] = i
+        # map = {}
+        # for i, num in enumerate(nums):
+        #     value = target - num
+        #     if value in map:
+        #         return [map[value],i]
+        #     map[num] = i
+        result=[]
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if target == nums[i]+nums[j]:
+                    return [i,j]
+                
+        
+
