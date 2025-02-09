@@ -27,7 +27,7 @@ class Solution:
         for i in range(len(nums)):
             for j in range(i+1, len(nums)):
                 for k in range(j+1, len(nums)):
-                    if nums[i] !=nums[j] and nums[i] != nums[k] and nums[j] != nums[k]:
+                    if nums[i] !=nums[j] or nums[i] != nums[k] and nums[j] != nums[k]:
                         found.append([nums[i],nums[j],nums[k]])
                         for nums[i], nums[j], nums[k] in found:
                             if nums[i]+nums[j]+nums[k]==0:
