@@ -19,9 +19,9 @@ class Solution:
             y = -heapq.heappop(stones)
             x = -heapq.heappop(stones)
             if y!=x:
-                heapq.heappush(stones,-(x-y))
+                heapq.heappush(stones,-(y-x))
         if stones:
-            return stones[0]
+            return -stones[0]
         else:
             return 0
   
