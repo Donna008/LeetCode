@@ -8,8 +8,11 @@ class Solution:
                 stones.remove(x)
                 if x !=y:
                     stones.append(y-x)
-                   
-        return stones[0] if stones else 0
+        if stones:
+            return stones[0]
+        else:
+            return 0          
+        # return stones[0] if stones else 0
                 #     if num!=num2:
                 #         sotones.append(num2 -num)
                 # if stones:
