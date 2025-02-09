@@ -22,20 +22,30 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         result=[]
-        found=[]
         nums.sort()
         for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
+            for j in range(i+1,len(nums)):
                 for k in range(j+1, len(nums)):
-                    if nums[i] !=nums[j] or nums[i] != nums[k] and nums[j] != nums[k]:
-                        nums[i]+nums[j]+nums[k]==0
-                        found.append([nums[i],nums[j],nums[k]])
-                        for i,j, k in found:
-                            result.append([i,j,k])
-
-
-                            # result.append([nums[i])
+                    if nums[i]+nums[j]+nums[k]==0:
+                        t=[nums[i],nums[j],nums[k]]
+                        if t not in result:
+                            result.append(t)
         return result
+        # result=[]
+        # found=[]
+        # nums.sort()
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         for k in range(j+1, len(nums)):
+        #             if nums[i] !=nums[j] or nums[i] != nums[k] and nums[j] != nums[k]:
+        #                 nums[i]+nums[j]+nums[k]==0
+        #                 found.append([nums[i],nums[j],nums[k]])
+        #                 for i,j, k in found:
+        #                     result.append([i,j,k])
+
+
+        #                     # result.append([nums[i])
+        # return result
 
 
 
