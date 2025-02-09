@@ -30,10 +30,10 @@ class Solution:
                     if nums[i] !=nums[j] or nums[i] != nums[k] and nums[j] != nums[k]:
                         found.append([nums[i],nums[j],nums[k]])
                         for nums[i], nums[j], nums[k] in found:
-                            if nums[i]+nums[j]+nums[k]==0:
+                            nums[i]+nums[j]+nums[k]==0
 
 
-                                result.append([nums[i],nums[j],nums[k]])
+                            result.append([nums[i],nums[j],nums[k]])
         return result
 
 
