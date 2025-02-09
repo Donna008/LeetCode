@@ -28,12 +28,13 @@ class Solution:
             for j in range(i+1, len(nums)):
                 for k in range(j+1, len(nums)):
                     if nums[i] !=nums[j] or nums[i] != nums[k] and nums[j] != nums[k]:
+                        nums[i]+nums[j]+nums[k]==0
                         found.append([nums[i],nums[j],nums[k]])
-                        for nums[i], nums[j], nums[k] in found:
-                            nums[i]+nums[j]+nums[k]==0
+                        for i,j, k in found:
+                            result.append([i,j,k])
 
 
-                            result.append([nums[i],nums[j],nums[k]])
+                            # result.append([nums[i])
         return result
 
 
